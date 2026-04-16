@@ -1,0 +1,55 @@
+/* Keeps the page content from getting too wide */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Forces everything in the header onto one line */
+.header-flex {
+  display: flex;
+  justify-content: space-between; /* Pushes logo left, nav right */
+  align-items: center;           /* Centers them vertically */
+  padding: 10px 0;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between logo and text */
+}
+
+.logo-area img {
+  height: 45px; /* Resized to look 'proper' on one line */
+  width: auto;
+}
+
+.brand-text h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.brand-text p {
+  font-size: 0.75rem;
+  margin: 0;
+  color: #39FF14; /* Brand Green */
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  font-size: 0.9rem;
+  white-space: nowrap; /* Prevents links from breaking into two lines */
+}
+
+/* Mobile Responsive: Stacks only when screen is very small */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
